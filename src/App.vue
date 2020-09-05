@@ -1,12 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <my-header></my-header>
   </div>
 </template>
+
+<script>
+  import MyHeader from './components/MyHeader'
+
+  export default {
+    components: {
+      MyHeader
+    }
+  }
+</script>
 
 <style lang="stylus">
 #app
