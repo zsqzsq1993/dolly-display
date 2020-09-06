@@ -13,7 +13,9 @@ module.exports = {
       alias: {
         src: resolve('src'),
         components: resolve('src/components'),
-        stylus: resolve('src/assets/stylus')
+        stylus: resolve('src/assets/stylus'),
+        css: resolve('src/assets/css'),
+        js: resolve('src/assets/js')
       }
     }
   }

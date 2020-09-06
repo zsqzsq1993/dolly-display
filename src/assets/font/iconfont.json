@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "384337",
+      "name": "cv",
+      "font_class": "cv",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "7334992",
+      "name": "github",
+      "font_class": "git",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "8335438",
+      "name": "mail, envelope, letter, email, newsletter",
+      "font_class": "mailenvelopeletteremailnewsletter",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "10884780",
+      "name": "changge wechat",
+      "font_class": "changgewechat",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    }
+  ]
+}
