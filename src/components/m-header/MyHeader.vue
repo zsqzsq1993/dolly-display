@@ -29,7 +29,7 @@
 <script>
   import { mapGetters, mapMutations } from 'vuex'
   import { introByChinese, titleByChinese, introByEnglish, titleByEnglish } from 'js/variables'
-  import LangSelect from './LangSelect.vue'
+  import LangSelect from 'components/m-language-select/LangSelect.vue'
   import * as types from 'src/store/mutation_types'
 
   export default {
@@ -65,6 +65,7 @@
   .m-header
     width 100%
     text-align left
+    margin-bottom 20px
     .lang-select-wrapper
       margin-bottom 10px
     .introduction-wrapper
@@ -77,9 +78,9 @@
         .icon-wrapper
           flex 0 0 auto
           margin-right 15px
-          color $color-text-ll
+          color $color-text-l
           font-size $font-size-median-x
       .content
         line-height 1.3
-        color $color-text-ll
+        color $color-text-l
 </style>

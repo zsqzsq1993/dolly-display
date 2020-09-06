@@ -38,7 +38,8 @@
     #lang-select
       padding 5px
       appearance: none
-      color $color-text-ll
+      color $color-theme
       background-color $color-background
+      border-color $color-theme
       border-radius 2px
 </style>
