@@ -2,11 +2,13 @@
   <div class="m-projects">
     <div class="project-wrapper"
          v-for="project in projects"
+         v-show="project.show"
          :key="project.name">
       <h1 class="title-wrapper" v-text="project.name"></h1>
       <p class="subtitle-wrapper" v-text="subTitle(project)"></p>
       <div class="image-wrapper">
         <img :src="project.url" :alt="project.name">
+        <div class="image-filter" v-if="project.filtered"></div>
       </div>
     </div>
   </div>
@@ -61,7 +63,15 @@
         font-size $font-size-basic
         no-wrap()
       .image-wrapper
+        position relative
         width 100%
+        .image-filter
+          position absolute
+          top 0
+          right 0
+          bottom 0
+          left 0
+          background-color $color-background-d
         img
           width 100%
 </style>
