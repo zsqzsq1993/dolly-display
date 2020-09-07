@@ -9,15 +9,15 @@
     <div class="icon-wrapper resume" @click="toResume">
       <i class="icon-cv"></i>
     </div>
-    <div class="icon-wrapper email">
+    <a class="icon-wrapper email" href="mailto:zsqzsq1993@yeah.net">
       <i class="icon-email"></i>
-    </div>
+    </a>
     <top-layer ref="toplayer">
       <div class="scan-image-wrapper"
            v-show="index === 0">
         <img src="./wechat.jpg" alt="zsqzsq1993">
       </div>
-      <div class="resume-wrapper" v-show="index === 1"></div>
+      <div class="resume-wrapper" v-show="index === 1" ref="resumeWrapper"></div>
       <a class="icon-download-wrapper" v-show="showDownLoad" href="/resume.pdf">
         <i class="icon-download"></i>
       </a>
@@ -72,7 +72,7 @@
       },
 
       initPdf () {
-        this.pdf = new Pdfh5('.resume-wrapper', {
+        this.pdf = new Pdfh5(this.$refs.resumeWrapper, {
           pdfurl: './resume.pdf',
           renderType: 'svg',
           URIenable: true
@@ -109,14 +109,17 @@
       justify-content center
 
       .scan-image-wrapper
-        flex 0 0 40%
-        width 40%
+        flex 0 0 30%
+        width 30%
+        @media screen and (max-width 415px)
+          flex 0 0 40%
+          width 40%
 
         img
           width 100%
 
       .resume-wrapper
-        margin-top 100px
+        margin-top  100px
         height 100vh
         background-color transparent
 

@@ -1,10 +1,14 @@
 <template>
   <div id="app" class="grid">
-    <div class="col-8-12 push-2-12">
+    <div class="col-10-12 push-1-12">
       <my-header></my-header>
-      <my-projects></my-projects>
+      <my-projects
+        @imgs-loaded="imageslag = true">
+      </my-projects>
     </div>
-    <div class="col-2-12"></div>
+    <div class="footer-wrapper col-1-1">
+      <my-footer></my-footer>
+    </div>
     <loading ref="loading"></loading>
   </div>
 </template>
@@ -13,13 +17,22 @@
   import MyHeader from 'components/m-header/MyHeader'
   import MyProjects from 'components/m-projects/MyProjects'
   import Loading from 'components/m-loading/Loading'
+  import MyFooter from 'components/m-footer/MyFooter'
   import { mapGetters } from 'vuex'
 
   export default {
     components: {
       MyHeader,
       MyProjects,
-      Loading
+      Loading,
+      MyFooter
+    },
+
+    data () {
+      return {
+        imageslag: false,
+        timerFlag: false
+      }
     },
 
     computed: {
@@ -31,15 +44,42 @@
         if (newVal !== oldVal) {
           this.activateLoading()
         }
+      },
+
+      imageslag (newVal) {
+        if (newVal && this.timerFlag) {
+          this.hideLoading()
+        }
+      },
+
+      timerFlag (newVal) {
+        if (newVal && this.imageslag) {
+          this.hideLoading()
+        }
       }
     },
 
+    mounted () {
+      this.activateLoading()
+    },
+
     methods: {
-      activateLoading () {
+      showLoading () {
         this.$refs.loading.show()
+      },
+
+      hideLoading () {
+        this.$refs.loading.hide()
+      },
+
+      activateLoading () {
+        this.timerFlag = false
+
+        this.showLoading()
+
         setTimeout(() => {
-          this.$refs.loading.hide()
-        }, 800)
+          this.timerFlag = true
+        }, 300)
       }
     }
   }

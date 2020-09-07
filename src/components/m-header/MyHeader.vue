@@ -66,6 +66,6 @@
       .links-wrapper
         margin-bottom 10px
       .content
-        line-height 1.3
+        line-height 1.5
         color $color-text-l
 </style>
