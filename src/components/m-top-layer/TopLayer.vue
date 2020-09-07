@@ -1,10 +1,12 @@
 <template>
-  <div class="m-top-layer" v-show="showFlag">
-    <div class="back-wrapper" @click.stop="hide">
-      <i class="icon-back"></i>
+  <transition name="slide">
+    <div class="m-top-layer" v-show="showFlag">
+      <div class="back-wrapper" @click.stop="hide">
+        <i class="icon-back"></i>
+      </div>
+      <slot></slot>
     </div>
-    <slot></slot>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -30,6 +32,11 @@
 <style lang="stylus">
   @import '~stylus/variable.styl'
 
+  .slide-enter-active, .slide-leave-active
+    transition all .4s
+  .slide-enter, .slide-leave-to
+    transform translate3d(-100%, 0, 0)
+
   .m-top-layer
     position fixed
     z-index 10
@@ -39,8 +46,10 @@
     left 0
     background-color rgba(0, 0, 0, 0.5)
     backdrop-filter blur(10px)
+
     .back-wrapper
       position absolute
+      z-index 20
       top 15px
       left 15px
       color $color-theme

@@ -10,6 +10,7 @@ import 'stylus/variable.styl'
 import 'css/simplegrid.css'
 import 'css/iconfont.css'
 import 'stylus/musicIcon.styl'
+import 'pdfh5/css/pdfh5.css'
 
 Vue.config.productionTip = false
 

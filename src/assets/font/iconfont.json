@@ -32,6 +32,13 @@
       "font_class": "changgewechat",
       "unicode": "e618",
       "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "13699343",
+      "name": " cloud download alt",
+      "font_class": "FontAwesomeclouddownloadalt",
+      "unicode": "e9d2",
+      "unicode_decimal": 59858
     }
   ]
 }
