@@ -1,0 +1,12 @@
+<template>
+  <transition tag="div" name="slide" appear>
+    <slot></slot>
+  </transition>
+</template>
+
+<style lang="stylus">
+  .slide-enter-active, slide-leave-active
+    transition all .4s
+  .slide-enter, .slide-leave-to
+    transform translate3d(-100%, 0, 0)
+</style>

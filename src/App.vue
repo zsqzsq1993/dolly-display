@@ -23,7 +23,7 @@
     },
 
     computed: {
-      ...mapGetters(['language'])
+      ...mapGetters(['language', 'scanLayer'])
     },
 
     watch: {

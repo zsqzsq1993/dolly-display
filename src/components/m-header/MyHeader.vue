@@ -8,18 +8,7 @@
     <div class="introduction-wrapper">
       <h1 class="title">{{title}}</h1>
       <div class="links-wrapper">
-        <div class="icon-wrapper wechat">
-          <i class="icon-changgewechat"></i>
-        </div>
-        <div class="icon-wrapper github">
-          <i class="icon-git"></i>
-        </div>
-        <div class="icon-wrapper resume">
-          <i class="icon-cv"></i>
-        </div>
-        <div class="icon-wrapper email">
-          <i class="icon-email"></i>
-        </div>
+        <links></links>
       </div>
       <p class="content">{{introduction}}</p>
     </div>
@@ -30,11 +19,13 @@
   import { mapGetters, mapMutations } from 'vuex'
   import { introByChinese, titleByChinese, introByEnglish, titleByEnglish } from 'js/variables'
   import LangSelect from 'components/m-language-select/LangSelect.vue'
+  import Links from 'components/m-links/Links.vue'
   import * as types from 'src/store/mutation_types'
 
   export default {
     components: {
-      LangSelect
+      LangSelect,
+      Links
     },
 
     computed: {
@@ -73,13 +64,7 @@
         font-size $font-size-large
         margin-bottom 10px
       .links-wrapper
-        display flex
         margin-bottom 10px
-        .icon-wrapper
-          flex 0 0 auto
-          margin-right 15px
-          color $color-text-l
-          font-size $font-size-median-x
       .content
         line-height 1.3
         color $color-text-l

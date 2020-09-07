@@ -9,6 +9,7 @@ import 'stylus/mixin.styl'
 import 'stylus/variable.styl'
 import 'css/simplegrid.css'
 import 'css/iconfont.css'
+import 'stylus/musicIcon.styl'
 
 Vue.config.productionTip = false
 
