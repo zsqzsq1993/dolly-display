@@ -18,7 +18,7 @@
         <img src="./wechat.jpg" alt="zsqzsq1993">
       </div>
       <div class="resume-wrapper" v-show="index === 1" ref="resumeWrapper"></div>
-      <a class="icon-download-wrapper" v-show="showDownLoad" href="/resume.pdf">
+      <a class="icon-download-wrapper" v-show="showDownLoad" href="./resume.pdf">
         <i class="icon-download"></i>
       </a>
     </top-layer>
