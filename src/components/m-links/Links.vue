@@ -16,6 +16,7 @@
       <div class="scan-image-wrapper"
            v-show="index === 0">
         <img src="./wechat.jpg" alt="zsqzsq1993">
+        <img src="./wechat.jpg" alt="zsqzsq1993">
       </div>
       <div class="resume-wrapper" v-show="index === 1" ref="resumeWrapper"></div>
       <a class="icon-download-wrapper" v-show="showDownLoad" href="./resume.pdf">
@@ -73,7 +74,7 @@
 
       initPdf () {
         this.pdf = new Pdfh5(this.$refs.resumeWrapper, {
-          pdfurl: './resume.pdf',
+          pdfurl: '/resume.pdf',
           renderType: 'svg',
           URIenable: true
         })
