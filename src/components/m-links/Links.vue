@@ -19,7 +19,7 @@
         <img src="./wechat.jpg" alt="zsqzsq1993">
       </div>
       <div class="resume-wrapper" v-show="index === 1" ref="resumeWrapper"></div>
-      <a class="icon-download-wrapper" v-show="showDownLoad" href="./resume.pdf">
+      <a class="icon-download-wrapper" v-show="showDownLoad" href="/resume.pdf">
         <i class="icon-download"></i>
       </a>
     </top-layer>
@@ -73,8 +73,13 @@
       },
 
       initPdf () {
+        const devMode = process.env.NODE_ENV !== 'production'
+
         this.pdf = new Pdfh5(this.$refs.resumeWrapper, {
-          pdfurl: './resume.pdf',
+          pdfurl: devMode
+            ? '/resume.pdf'
+            : 'http://dollylosingweight.today/resume.pdf',
+
           renderType: 'svg'
         })
 
