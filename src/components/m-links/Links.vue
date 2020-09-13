@@ -74,9 +74,8 @@
 
       initPdf () {
         this.pdf = new Pdfh5(this.$refs.resumeWrapper, {
-          pdfurl: '/resume.pdf',
-          renderType: 'svg',
-          URIenable: true
+          pdfurl: './resume.pdf',
+          renderType: 'svg'
         })
 
         this.pdf.on('complete', () => {
