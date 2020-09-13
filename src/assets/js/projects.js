@@ -3,7 +3,7 @@ const projects = [{
   introByChinese: '一款Vuepress开发的Blog主题',
   introByEnglish: 'A blog theme developed by Vuepress',
   imageUrl: require('../images/dolly-blogs.jpg'),
-  link: 'http://106.53.250.228/blogs',
+  link: 'http://dollylosingweight.today/blogs',
   onlyMobile: false,
   filtered: false,
   show: true
@@ -13,7 +13,7 @@ const projects = [{
   introByEnglish: 'A full-featured music Web App for mobile',
   imageUrl: require('../images/dolly-music.jpg'),
   codeUrl: require('../images/dolly-music-code.png'),
-  link: 'http://106.53.250.228/music',
+  link: 'http://dollylosingweight.today/music',
   onlyMobile: true,
   filtered: false,
   show: true
@@ -23,7 +23,7 @@ const projects = [{
   introByEnglish: 'A takeaway App merchant display page',
   imageUrl: require('../images/dolly-take-away.jpg'),
   codeUrl: require('../images/dolly-take-away-code.png'),
-  link: 'http://106.53.250.228/take-away',
+  link: 'http://dollylosingweight.today/take-away',
   onlyMobile: true,
   filtered: false,
   show: true
