@@ -2,8 +2,8 @@ const express = require('express')
 const https = require('https')
 const fs = require('fs')
 const credentail = {
-  key: fs.readFileSync('/etc/nginx/1_dollylosingweight.today_bundle.crt'),
-  cert: fs.readFileSync('/etc/nginx/2_dollylosingweight.today.key')
+  cert: fs.readFileSync('/etc/nginx/1_dollylosingweight.today_bundle.crt'),
+  key: fs.readFileSync('/etc/nginx/2_dollylosingweight.today.key')
 }
 
 const app = express()
