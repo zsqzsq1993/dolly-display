@@ -78,7 +78,7 @@
         this.pdf = new Pdfh5(this.$refs.resumeWrapper, {
           pdfurl: devMode
             ? '/resume.pdf'
-            : 'http://dollylosingweight.today/resume.pdf',
+            : 'https://dollylosingweight.today/resume.pdf',
 
           renderType: 'svg'
         })
