@@ -41,7 +41,7 @@ const projects = [{
   introByChinese: '一款轻量级PC、移动端皆可使用的拖拽库',
   introByEnglish: 'A lightweight drag and drop library suitable for both PC and mobile',
   imageUrl: require('../images/free-drag.gif'),
-  link: 'https://dolly5zhang.com/free-drag',
+  link: 'http://dollylosingweight.today/test-free-drag',
   onlyMobile: false,
   filtered: true,
   show: true
